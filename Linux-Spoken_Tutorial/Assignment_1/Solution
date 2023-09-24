@@ -1,0 +1,18 @@
+		  Spoken Tutorials - Linux Assignment 
+						Funded by the National Mission on Education through ICT
+							 Indian Institute of Technology Bombay,
+								http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                               Basic Commands in Linux
+
+1) Commands are actually files containing programs, often written in C. How will you find out in which directory does  the file corresponding to the man command resides?
+   Answer : which command followed by argument is used to display the path of the argument 
+            To display the path of the man command 
+   Command: which man
+
+2)How will you find out what is the use of the ps command.
+   Answer : the ps command is to list the currently running processes and their PIDs and other information
+            The commands used to know the use of ps command is :
+	Command : whatis ps 
+							(or)  
+						ps --help
