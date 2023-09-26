@@ -1,0 +1,45 @@
+Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Basics of Shell Scripting
+1) Write a simple Bash program to get the following system variables:
+   a. pwd
+   b. logname
+Ans:
+gedit a2.sh &
+a2.sh
+#!/bin/bash
+
+# Get the current working directory (pwd)
+current_directory=$(pwd)
+echo "Current Working Directory: $current_directory"
+
+# Get the login name (logname)
+login_name=$(logname)
+echo "Login Name: $login_name"
+
+chmod +x a2.sh
+./a2.sh
+
+2) Write a simple Bash program:
+   a. To ask username from user
+   b. Exit the program, if user does not enter anything within 10 seconds
+   Hint: read -t 10 -p
+Ans:
+gedit a22.sh &
+a22.sh
+#!/bin/bash
+
+read -t 10 -p "Enter username: " username
+
+if [[ -z "$username" ]]; then
+  echo "No input received. Exiting!"
+  exit 1
+fi
+
+echo "Username: $username"
+
+chmod +x a22.sh
+./a22.sh
