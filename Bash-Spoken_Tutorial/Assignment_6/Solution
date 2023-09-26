@@ -1,0 +1,32 @@
+Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+More on Arrays
+
+1) Declare an Array names2 of length 7 and perform following operations-
+   a. Extract three elements starting from index two. 
+   b. Replace third element with 'Debian' and display.
+   c. Append any new name at the end of Array.
+Soln:
+gedit a6.sh &
+#!/bin/bash
+
+names2=("Viru" "xyz" "abc" "bcd" "def" "efg" "fgh")
+first_three=("${names2[@]:2:3}")
+echo "Extracted elements starting from index two:"
+for i in "${first_three[@]}"; do
+    echo "$i"
+done
+
+names2[2]="Debian"
+echo "After replacing!: ${names2[@]}"
+
+last="ghi"
+names2[7]="$last"
+echo "Array after adding at last!${names2[@]}"
+
+chmod +x a6.sh
+./a6.sh
+
