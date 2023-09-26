@@ -1,0 +1,31 @@
+Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Conditional execution
+
+1) Write a script which will take your name as an input.
+2) It should check this name with your system's username.
+3) If the username matches, it should greet you by displaying "Hello".
+4) Else, it should display "Try again"
+HINT: Your system's username is stored in a variable $USER 
+
+Solution:
+gedit exe.sh &
+exe.sh
+
+#!/bin/bash
+
+echo "Enter name:"
+read input
+
+systemuser=$USER
+if [ "$input" = "$systemuser" ]; then
+    echo "Hello $input!"
+else
+    echo "Try again"
+fi
+
+chmod +x exe.sh
+./exe.sh
