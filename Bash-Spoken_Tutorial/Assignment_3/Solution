@@ -1,0 +1,24 @@
+					Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Command Line arguments and Quoting
+
+1) Write a bash program for addition using command line arguments.
+gedit a3.sh &
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+  echo "Error: Two arguments are required."
+  echo "Usage: $0 <number1> <number2>"
+  exit 1
+fi
+
+number1=$1
+number2=$2
+sum=$((number1 + number2))
+echo "The sum of $number1 and $number2 is: $sum"
+
+chmod +x a3.sh
+./a3.sh 5 6
