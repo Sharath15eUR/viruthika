@@ -1,0 +1,29 @@
+					Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Array Operations in BASH
+
+1) Declare an Array names of length 7 and find
+   a. The total number of elements
+   b. Print all the elements
+   c. Print the 5th element
+Solution:
+
+gedit a5.sh &
+#!/bin/bash
+
+arr=("Viru" "abc" "bcd" "xyz" "wxy" "def" "tuy")
+
+total=${#arr[@]}
+echo "Total no. of elements: $total"
+
+echo "The Elements in the List are:"
+for i in "${arr[@]}"; do
+    echo "$i"
+done
+echo "The 5th element: ${arr[4]}"
+
+chmod +x a5.sh
+./a5.sh
