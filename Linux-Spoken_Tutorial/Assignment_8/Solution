@@ -8,14 +8,21 @@ Basics Of System Administration in Linux
 
 
 1) Create a new user account and home directory called "Duck" 
+ sudo adduser duck
 
 2) Set the user account "Duck's" expirey date as 07 - 01 - 2015
+sudo usermod -e 2015-01-07 duck
 
 3) find the id of the user account "Duck"
+id -u duck
 
 4) Type df and du commands and see the output on your terminal.
+df -h
+du -s *.txt
 
 5) Type this command on the terminal and see the output :
    du -ch *.txt
+It displays the overall disk usage on text files. 
 
 6) Delete the user account "Duck" permanently along with its home folder.
+sudo userdel -r duck
