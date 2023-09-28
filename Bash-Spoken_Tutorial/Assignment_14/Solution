@@ -1,0 +1,28 @@
+					Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Case statement
+
+1) Write a menu driven program for mathematical calculation
+   a. It should take user inputs a and b
+   b. It should ask for mathematical operator (+, -, / and *).
+   c. Do the calculation
+   d. Print the output
+#!/bin/bash
+echo " Enter your choice : +=1;-= 2;*=3;/=4"
+read y
+case $y in 
+[1]) echo "Addition of $1 & $2"
+     echo $1+$2
+      ;;
+[2]) echo "Subtraction of $1 & $2"
+     echo $1-$2
+      ;;
+[3]) echo "Multiplication of $1 & $2"
+     echo $1*$2
+      ;;
+[4]) echo "Division of $1 & $2"
+     echo $1/$2
+      ;;
