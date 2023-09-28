@@ -8,8 +8,7 @@ Logical Operators
 1) Check whether the file exists and is executable using logical operators.
    Hint:man test
 #!/bin/bash
-if[!-f "$1"];
-then
+if [ ! -f f2.txt ]; then
         echo "File doesn't exists!"
 else
         echo "File exists!!"
