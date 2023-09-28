@@ -10,5 +10,5 @@ String and File attributes
    -x
    -o
 -r --> Reading permissions to the file
--x --> 
--o --> 
+-x --> It refers to the permissions to execute
+-o --> It refers to the owner permission
