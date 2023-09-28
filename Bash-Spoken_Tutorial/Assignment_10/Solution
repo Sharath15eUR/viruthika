@@ -8,6 +8,8 @@ Arithmetic Comparison
 1) Write a program to demonstrate the use of not equal to operator.
    Hint: -ne
 #!/bin/bash
-if("$1" -ne 0); then
+if [ "$1" -ne 0 ] ; then
          echo "It is not equal to 0"
+else
+	 echo "It is equal to 0"
 fi
