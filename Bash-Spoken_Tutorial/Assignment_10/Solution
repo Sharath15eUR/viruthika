@@ -1,0 +1,13 @@
+                Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Arithmetic Comparison
+
+1) Write a program to demonstrate the use of not equal to operator.
+   Hint: -ne
+#!/bin/bash
+if("$1" -ne 0); then
+         echo "It is not equal to 0"
+fi
