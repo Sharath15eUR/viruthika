@@ -7,4 +7,10 @@ Logical Operators
 
 1) Check whether the file exists and is executable using logical operators.
    Hint:man test
-ihll
+#!/bin/bash
+if[!-f "$1"];
+then
+        echo "File doesn't exists!"
+else
+        echo "File exists!!"
+fi
