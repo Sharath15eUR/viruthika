@@ -6,4 +6,35 @@
 Conditional Loops
 
 1) Find the sum of first n prime numbers.
+#!/bin/bash
+isPrime() {
+    local no=$1
+    if [ $no -le 1 ]; then
+        return 1
+    fi
 
+    for ((i=2; i*i<=no; i++)); do
+        if [ $((no % i)) -eq 0 ]; then
+            return 1
+        fi
+    done
+    return 0
+}
+Sum() {
+    local n=$1
+    local sum=0
+    local count=0
+    local number=2
+    while [ $count -lt $n ]; do
+        if isPrime $number; then
+            sum=$((sum + number))
+            count=$((count + 1))
+        fi
+        number=$((number + 1))
+    done
+    echo $sum
+}
+
+read -p "Enter n: " n
+total_sum=$(Sum $n)
+echo "The sum of the first $n prime numbers is: $total_sum"
