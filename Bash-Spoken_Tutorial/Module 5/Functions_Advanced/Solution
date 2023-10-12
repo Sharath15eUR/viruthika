@@ -1,0 +1,20 @@
+Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Advance topics in a function
+
+1) Write a function add to add two numbers and call the function in another file.
+advance.sh
+#!/bin/bash
+source addition.sh
+echo "Main"
+add $1 $2
+
+addition.sh
+add()
+{
+echo $(($1+$2))
+echo "Addition"
+}
