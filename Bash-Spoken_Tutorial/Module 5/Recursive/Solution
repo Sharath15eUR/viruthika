@@ -1,0 +1,26 @@
+Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Recursive function
+
+1) Write a program where the recursive function calculates the sum of N numbers 
+#!/bin/bash
+sum() {
+    local n=$1
+    local sum=$2
+    if [ $n -eq 0 ]; then
+        echo $sum
+        return
+    fi
+    
+    local new=$((sum + n))
+    sum $((n - 1)) $new
+}
+
+echo "Enter the value of N:"
+read n
+
+result=$(sum $n 0)
+echo "The sum of the numbers is: $result"
