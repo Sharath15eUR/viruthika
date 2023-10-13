@@ -1,0 +1,27 @@
+					Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Here document and Here string
+
+1) Convert a string to uppercase using:
+	a) Here document
+	b) Here string
+	
+Hint: tr a-z A-Z
+
+a)
+input="Viruthika!"
+
+output=$(tr 'a-z' 'A-Z' <<< "$input")
+
+echo $output
+
+b) #!/bin/bash
+
+input="Viruthika"
+
+output=$(echo "$input" | tr 'a-z' 'A-Z')
+
+echo $output
