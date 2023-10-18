@@ -1,8 +1,9 @@
 Sed Command
 1) Use the same text file seddemo.txt 
 2) Try to print records from 6th to 12th line.
-
+sed -n '6,12p' seddemo.txt
 
 More on sed Command:
 1) Use the same text file seddemo.txt
 2) Try to replace or substitute name Ankit with Ashish
+sed 's/Ankit/Ashish/' seddemo.txt
