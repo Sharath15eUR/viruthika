@@ -8,3 +8,20 @@ More on Loops
 1) Retype nested-for.sh bash script using nested while loop
 2) Save your program with the name: nested-while.sh
 
+#!/usr/bin/env bash
+# Initialize a counter for directories
+dir_counter=1
+# Start the outer while loop to iterate over directories
+while [ -d "test$dir_counter" ]; do
+    dir="test$dir_counter"
+    echo "Files in $dir directory:"
+    echo ""
+    # Initialize a counter for files within the directory
+    file_counter=1
+    while read -r file; do
+        echo "$file"
+        ((file_counter++))
+    done < <(ls -1 "$dir")
+    echo "------------------------"
+    ((dir_counter++))
+done
