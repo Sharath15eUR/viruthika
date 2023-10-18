@@ -1,7 +1,7 @@
 Grep Command
 1) Explore some other commands like -E, + and ?
-
+grep -E 'electronics' grepdemo.txt
 
 More on Grep Command
 1) List those entries that are 5 letters long and starts with Y
-
+grep -i  "Y.... " grepdemo.txt
