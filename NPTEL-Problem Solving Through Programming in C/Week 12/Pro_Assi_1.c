@@ -36,5 +36,4 @@ printf("%d", s[i].rollno);
 printf("  %s", s[i].name);
 printf("  %d\n", s[i].score);
 }
-
 }
